@@ -34,6 +34,7 @@
     <h1>请输入秒数 (x):</h1>
     <input type="number" id="interval" placeholder="输入秒数" />
     <button onclick="startSound()">开始提示</button>
+    <button onclick="startRepeat()">开始重复</button>
 
     <div id="countdown">00:00</div>
 
@@ -65,6 +66,14 @@
             } else {
                 alert("请输入有效的数字！");
             }
+        }
+        
+        function startRepeat() {
+            var interval = document.getElementById("interval").value;
+            // 重复计时
+            setInterval(function() {
+                startSound();
+            }, interval * 1001);
         }
     </script>
 
