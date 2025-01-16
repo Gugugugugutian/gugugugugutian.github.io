@@ -31,10 +31,9 @@
     </style>
 </head>
 <body>
-
     <h1>Interval Countdown</h1>
-    <input type="number" id="interval" placeholder="Countdown seconds" />
-    <button onclick="startSound()">Start</button>
+    <input type="number" id="interval" class="disp_a" placeholder="Countdown seconds" />
+    <button onclick="startSound()" class="disp_a">Start</button>
 
     <div id="countdown">00:00</div>
 
@@ -45,6 +44,7 @@
 
         function startSound() {
             intervalInput = document.getElementById("interval").value;
+            
             if (intervalInput && intervalInput > 0) {
                 remainingTime = intervalInput;
                 var sound = new Audio('./beep.wav'); // 替换为其他音频链接
